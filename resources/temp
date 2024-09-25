@@ -1,0 +1,162 @@
+@extends('layouts.app')
+
+@push('styles')
+
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+@endpush
+
+@push('styles')
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+@endpush
+
+@section('content')
+
+<div class="container-triangle">
+    <h1 class="title">ABOUT ME</h1>
+    <h3 class="sub">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."</h3>
+    <img class="me" src="{{asset('img/2x2.jpg')}}" alt="Picture me">
+    <div class="triangle" data-aos="fade-in"></div>
+</div>
+<br>
+<hr class="line">
+<div class="section" data-aos="fade-up">
+  <h1 class="titles">Education</h1>
+  <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <ul class="carousel">
+        <li class="card">
+        <h2 class="attainment">University</h2>
+          <div class="img"><img src="{{ asset('img/PLP.png') }}" alt="img" draggable="false"></div>
+          <h2>Pamantasan ng Lungsod ng Pasig</h2>
+          <span>Years</span>
+        </li>
+        <li class="card">
+          <h2 class="attainment">Senior High School</h2>
+          <div class="img"><img src="{{ asset('img/RHS.jpg') }}" alt="img" draggable="false"></div>
+          <h2>Rizal High Scool</h2>
+          <span>Years</span>
+        </li>
+        <li class="card">
+          <h2 class="attainment">Junior High School</h2>
+          <div class="img"><img src="{{ asset('img/RHS.jpg') }}" alt="img" draggable="false"></div>
+          <h2>Rizal High School</h2>
+          <span>Years</span>
+        </li>
+        <li class="card">
+        <h2 class="attainment">Junior High School</h2>
+          <div class="img"><img src="{{ asset('img/PCC.png') }}" alt="img" draggable="false"></div>
+          <h2>Pasig Catholic College</h2>
+          <span>Years</span>
+        </li>
+        <li class="card">
+          <h2 class="attainment">Elementary School</h2>
+          <div class="img"><img src="{{ asset('img/PCC.png') }}" alt="img" draggable="false"></div>
+          <h2>Pasig Catholic College</h2>
+          <span>Years</span>
+        </li>
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+</div>
+<br>
+<hr class="line">
+<div class="section">
+  <h1 class="titles">Employment History</h1>
+  <div class="textbox" data-aos="fade-left">
+    <h2 class="text">Pasig City Hall | Junior IT Developer</h2>
+    <h2 class="years">Years</h2>
+    <ul class="jobdesc">
+      <li class="desclist">
+        <h3 class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</h3>
+      </li>    
+    </ul>
+  </div>
+  <div class="textbox" data-aos="fade-right">
+    <h2 class="text">BIR</h2>
+    <h2 class="years">Years</h2>
+    <ul class="jobdesc">
+      <li class="desclist">
+        <h3 class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</h3>
+      </li>    
+    </ul>
+  </div>
+  <div class="textbox" data-aos="fade-left">
+    <h2 class="text">BIR</h2>
+    <h2 class="years">Years</h2>
+    <ul class="jobdesc">
+      <li class="desclist">
+        <h3 class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</h3>
+      </li>    
+    </ul>
+  </div>
+</div>
+<br>
+<hr class="line">
+<br>
+<h1 class="titles">Skills</h1>
+<div class="section1">
+  <div class="skillbox" data-aos="fade-right">
+    <h2 class="skilltext">Programming Skills</h2>
+    <ul class="skilllist">
+      <li class="skillitem">Python</li>
+      <li class="skillitem">Java</li>
+      <li class="skillitem">C++</li>
+      <li class="skillitem">JavaScript</li>
+      <li class="skillitem">SQL</li>
+    </ul>
+  </div>
+  <div class="skillbox" data-aos="fade-left">
+    <h2 class="skilltext">Soft Skills</h2>
+    <ul class="skilllist">
+      <li class="skillitem">Python</li>
+      <li class="skillitem">Java</li>
+      <li class="skillitem">C++</li>
+      <li class="skillitem">JavaScript</li>
+      <li class="skillitem">SQL</li>
+    </ul>
+  </div>
+</div>
+<br>
+<hr class="line">
+<div>
+  <h1 class="titles">Certificates</h1>
+</div>
+
+
+
+
+    <script src="{{ asset('js/carousel.js') }}"></script>
+    <script>
+   AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+  </script>
+@endsection
